@@ -20,7 +20,7 @@ export default function Navbar() {
     
     });
     const deletePhoneBookDate = async(id) => {
-        await fetch('http://localhost:8080/delete/'+id, {
+        await fetch('https://phonebookserver-24x7.onrender.com/delete/'+id, {
             method: 'DELETE',
             });
     console.log(id);
