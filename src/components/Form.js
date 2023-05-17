@@ -23,6 +23,7 @@ export default function Form() {
         const data=await response.json();
         console.log(data);
     }
+   
     // const getPhoneBookData = async ()=>{
     //     const response=await fetch('https://phonebookserver-24x7.onrender.com/db',{
     //         method:'GET',

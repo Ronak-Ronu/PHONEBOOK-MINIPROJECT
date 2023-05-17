@@ -17,8 +17,14 @@ export default function Navbar() {
     }
     useEffect(()=>{
         getPhoneBookData();
+    
     });
-
+    const deletePhoneBookDate = async(id) => {
+        await fetch('http://localhost:8080/delete/'+id, {
+            method: 'DELETE',
+            });
+    console.log(id);
+}
     return (
     <>
     <div className='topnav'>
@@ -27,7 +33,9 @@ export default function Navbar() {
     <h5 className='name1'>ALL CONTACTS</h5>
     <div className='container'>
         {user.map(usr=>(<div className='card' key={usr._id}>
-            <span className='profile'> <img src={image3} className="image3" alt="" /></span>
+            <span className='profile'> <img src={image3} className="image3" alt="" />
+            <button onClick={()=>deletePhoneBookDate(usr._id)}>delete</button>
+            </span>
             <span className='username'>{usr.name}</span>
             <span className='phone'>  {usr.phone}  </span>
             <span className='location'> {usr.location}</span>
