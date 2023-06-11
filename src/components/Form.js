@@ -53,9 +53,11 @@ export default function Form() {
         <label >Location</label>
     </div >
     <div className="button">
-
         <input type="submit" />
-    </div>
+        <a href="/">
+            <p>Go Back</p>
+        </a>
+            </div>
     </form>
 </div>
     {/* <p>{JSON.stringify(form)}</p> */}
