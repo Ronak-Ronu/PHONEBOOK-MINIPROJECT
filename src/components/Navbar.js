@@ -18,7 +18,7 @@ export default function Navbar() {
     useEffect(()=>{
         getPhoneBookData();
     
-    });
+    },[]);
     const deletePhoneBookDate = async(id) => {
         await fetch('https://phonebookserver-24x7.onrender.com/delete/'+id, {
             method: 'DELETE',
